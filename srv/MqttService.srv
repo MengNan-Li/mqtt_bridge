@@ -1,0 +1,5 @@
+string cmd
+string data
+---
+int32 result
+string message
