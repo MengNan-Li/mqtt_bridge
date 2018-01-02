@@ -160,10 +160,6 @@ class MqttClient():
         self.connect_init_flag = False
         self.sub_list = []
 
-    def start(self):
-        self.init_mqtt_client()
-        return True
-
     def init_mqtt_client(self, robotid):
         endpoint = 'mqtt://mqtt-lyhsp2t4.bj.mqtt.myqcloud.com:1883'
         clientId = 'mqtt-lyhsp2t4@productId'
