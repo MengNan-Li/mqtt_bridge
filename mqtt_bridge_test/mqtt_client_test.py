@@ -8,15 +8,18 @@ from MqttBridgeRos import MqttClient
 
 mqtt_client_test = MqttClient()
 
+
 def on_message(client, userdata, msg):
     print str(msg.payload)
+
 
 def on_connect(client, userdata, flags, rc):
     print "on_connect"
     mqtt_client_test.mqtt_client.subscribe(
-            "topic/terminal_command_pull/robot/" + "WATER_C1S2_00087")
+        "topic/terminal_command_pull/robot/" + "WATER_C1S2_00087")
     mqtt_client_test.mqtt_client.subscribe(
         "robot/shuidi/topic/base_data_push")
+
 
 if __name__ == "__main__":
     mqtt_client_test.init_mqtt_client("WATER-C1S2-00087")
